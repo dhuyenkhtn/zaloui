@@ -1,57 +1,89 @@
+:root {
+  --danui-background-random: "https://source.unsplash.com/random/1200x860";
+
+  --danui-background-normal: url(https://images.unsplash.com/photo-1539592071786-616fb62b6c27?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+  --danui-background-color-normal: #eff2f5;
+  --danui-main-color-normal: #858585;
+  --danui-main-color-selected-normal: #707070;
+  --danui-box-shadow-normal: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+  0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --danui-text-background-normal: #bcbcbc;
+  --danui-text-time-color-normal: #4b4b4b;
+  --danui-text-color-normal: inherit;
+  
+  --danui-background-avocado: url(https://images.unsplash.com/photo-1560155016-bd4879ae8f21?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2467&q=80);
+  --danui-background-color-avocado: #c9f4ba36;
+  --danui-main-color-avocado: #94cb80;
+  --danui-main-color-selected-avocado: #7bb865;
+  --danui-box-shadow-avocado: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+  0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);;
+  --danui-text-background-avocado: #7ab765;
+  --danui-text-time-color-avocado: #ececec;
+  --danui-text-color-avocado: #FFFFFF;
+  
+  --danui-background: var(--danui-background-avocado);
+  --danui-background-color: var(--danui-background-color-avocado);
+  --danui-main-color: var(--danui-main-color-avocado);
+  --danui-main-color-selected: var(--danui-main-color-selected-avocado);
+  --danui-box-shadow: var(--danui-box-shadow-avocado);
+  --danui-text-background: var(--danui-text-background-avocado);
+  --danui-text-time-color: var(--danui-text-time-color-avocado);
+  --danui-text-color: var(--danui-text-color-avocado);
+}
+
+#messageViewContainer {
+  background: var(--danui-background);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 body {
-  font-family: "Google Sans", "Be Vietnam", system-ui, -apple-system, BlinkMacSystemFont,
-    ".SFNSText-Regular", sans-serif !important;
+  font-family: "Google Sans", "Be Vietnam", system-ui, -apple-system,
+    BlinkMacSystemFont, ".SFNSText-Regular", sans-serif !important;
   -webkit-font-smoothing: antialiased !important;
   text-rendering: optimizeLegibility !important;
   -webkit-touch-callout: none !important;
 }
 
-#messageViewContainer {
-  /* background: url(https://source.unsplash.com/random/1200x860); */
-  /* background: url(https://source.unsplash.com/random/1600x860); */
+/* #messageViewContainer {
   background: url(https://images.unsplash.com/photo-1539592071786-616fb62b6c27?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
 div#main-tab.nav__tabs.WEB {
   margin: 8px;
   border-radius: 12px;
   margin-top: 5px;
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
-    0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  background-color: #858585;
+  box-shadow: var(--danui-box-shadow);
+  background-color: var(--danui-main-color);
 }
 
 #sidebarNav > div:not(.nav__tabs) {
   margin: 8px;
   border-radius: 12px;
   margin-left: 4px;
-  /* border: 1px solid; */
   background-color: #ffffff;
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
-    0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--danui-box-shadow);
 }
 
 main {
   margin: 8px;
-  /* border: 1px solid; */
   border-radius: 12px;
   margin-left: 4px;
-  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12),
-    0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--danui-box-shadow);
 }
 
 div#resize-handle {
   background: none;
-  color: #fff;
+  color: #ffffff;
   border: none;
   opacity: 0;
 }
 
 nav#sidebarNav {
-  border-right-color: #eeeeee;
-  background-color: #eeeeee;
+  border-right-color: var(--danui-background-color);
+  background-color: var(--danui-background-color);
 }
 
 .card.card--text {
@@ -59,30 +91,36 @@ nav#sidebarNav {
 }
 
 .card.me {
-  background-color: #bcbcbc;
+  background-color: var(--danui-text-background);
   box-shadow: none;
+  color: var(--danui-text-color);
 }
 
 body {
-  background-color: #eeeeee;
+  background-color: var(--danui-background-color);
 }
 
 .leftbar-tab.chat-message.first-selected:hover,
 .leftbar-tab.chat-message.last-selected:hover,
 .leftbar-tab:hover.selected {
-  background: #858585;
+  background: var(--danui-main-color);
 }
 
 .leftbar-tab.chat-message.first-selected,
 .leftbar-tab.chat-message.last-selected,
 .leftbar-tab.selected {
-  background: #707070;
+  background: var(--danui-main-color-selected);
 }
 
 #chatOnboard {
-    display: none;
+  display: none;
 }
 
 .card--group-photo.me {
-    background: none;
+  background: none;
+}
+
+.card.me span.card-send-time__sendTime, .card.me .card-send-status {
+  color: var(--danui-text-time-color);
+  font-style: italic;
 }
